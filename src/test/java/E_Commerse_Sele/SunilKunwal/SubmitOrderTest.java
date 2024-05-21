@@ -14,6 +14,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import E_Commerse_Sele.pageobjects.CartPage;
+import E_Commerse_Sele.pageobjects.CheckoutPage;
+import E_Commerse_Sele.pageobjects.ConfirmationPage;
 import E_Commerse_Sele.pageobjects.LandingPage;
 import E_Commerse_Sele.pageobjects.ProductCatalogue;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -33,31 +36,21 @@ public class SubmitOrderTest {
 
 		LandingPage landingPage = new LandingPage(driver);
 		landingPage.goTo();
-		landingPage.loginApplication("sunilkunwal@gmail.com", "Kunwal@123");
-		ProductCatalogue productCatalogue = new ProductCatalogue(driver);
+		ProductCatalogue productCatalogue = landingPage.loginApplication("sunilkunwal@gmail.com", "Kunwal@123");
 		List<WebElement>Products = productCatalogue.getProductList();
 		productCatalogue.addProductToCart(productName);
-		
-		
-		driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
-		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".cartSection h3")));
-		List <WebElement> cartProducts = driver.findElements(By.cssSelector(".cartSection h3"));
-		Boolean match = cartProducts.stream().anyMatch(cartProduct-> cartProduct.getText().equalsIgnoreCase(productName));
+		CartPage cartPage = productCatalogue.goToCartPage();
+	
+		Boolean match = cartPage.VerifyProductDisplay(productName);
 		Assert.assertTrue(match);
-		driver.findElement(By.cssSelector(".totalRow button")).click();
-		
-		Actions action = new Actions(driver);
-		action.sendKeys(driver.findElement(By.cssSelector("[placeholder='Select Country']")), "ind").build().perform();
-		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ta-results")));
-		driver.findElement(By.xpath("(//button[contains(@class,'ta-item')])[2]")).click();
-		action.moveToElement(driver.findElement(By.cssSelector(".action__submit"))).click().build().perform();
-		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".hero-primary")));
-		String confirmMessage = driver.findElement(By.cssSelector(".hero-primary")).getText();
+		CheckoutPage checkoutPage = cartPage.goToheckout();
+		checkoutPage.selecctcountry("ind");
+		ConfirmationPage confirmationPage =checkoutPage.submitOrder();
+
+		String confirmMessage = confirmationPage.getConfirmMessage();
 		Assert.assertTrue(confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER."));
-		
+		driver.close();
+//		
 		
 
 	}

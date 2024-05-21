@@ -10,24 +10,23 @@ import org.openqa.selenium.support.PageFactory;
 
 import SunilKunwal.AbstractComponents.AbstractComponent;
 
-public class ProductCatalogue extends AbstractComponent{
+public class CartPage extends AbstractComponent{
 	
 	WebDriver driver;
 	
-	public ProductCatalogue(WebDriver driver) 
+	public CartPage(WebDriver driver) 
 	{
 		//Initialization
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
-
-	@FindBy(css= ".mb-3")
-	List<WebElement> products;
 	
-	@FindBy(css= ".ng-animating")
-	WebElement spinner;
+	@FindBy(css= ".totalRow button")
+	WebElement checkoutEle;
+	
+	@FindBy(css= ".cartSection h3")
+	List<WebElement> cartProducts;
 	
 	
 	
@@ -38,23 +37,19 @@ public class ProductCatalogue extends AbstractComponent{
 	public List<WebElement> getProductList() 
 	{
 		waitForElementToAppear(productsBy);
-		return products;
+		return cartProducts;
 	}
 	
-	public WebElement getProductByName(String productName)
+	public Boolean VerifyProductDisplay(String productName)
 	{
-		WebElement Prod = getProductList().stream()
-				.filter(Product -> Product.findElement(By.cssSelector("b")).getText().equals(productName)).findFirst()
-				.orElse(null);
-		return Prod;
+		Boolean match = cartProducts.stream().anyMatch(Product-> Product.getText().equalsIgnoreCase(productName));
+		return match;
 	}
 	
-	public void addProductToCart(String productName)
+	public CheckoutPage goToheckout()
 	{
-		WebElement Prod =getProductByName(productName);
-		Prod.findElement(addToCart).click();
-		waitForElementToAppear(toastMessage);
-		waitForElementToDisappear(spinner);
+		checkoutEle.click();
+		return new CheckoutPage(driver);
 	
 		
 	}

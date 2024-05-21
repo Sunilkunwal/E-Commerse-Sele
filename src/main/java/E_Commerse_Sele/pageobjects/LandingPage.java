@@ -19,9 +19,6 @@ public class LandingPage extends AbstractComponent {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
-	
-//	WebElement userEmail = driver.findElement(By.id("userEmail"));
 	
 	//PageFactory
 	@FindBy(id="userEmail")
@@ -33,14 +30,23 @@ public class LandingPage extends AbstractComponent {
 	@FindBy(id="login")
 	WebElement submit;
 	
-	public void loginApplication(String email, String password)
+	public ProductCatalogue loginApplication(String email, String password)
 	{
 		userEmail.sendKeys(email);
 		PasswordEle.sendKeys(password);
 		submit.click();
+		ProductCatalogue productCatalogue = new ProductCatalogue(driver);
+		return productCatalogue;
 	}
 	
 	public void goTo() {
 		driver.get("https://rahulshettyacademy.com/client");
 	}
+	
+	
+	
+	
+	
+	
+	
 }
