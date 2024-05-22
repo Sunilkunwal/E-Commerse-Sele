@@ -10,52 +10,44 @@ import org.openqa.selenium.support.PageFactory;
 
 import SunilKunwal.AbstractComponents.AbstractComponent;
 
-public class ProductCatalogue extends AbstractComponent{
-	
+public class ProductCatalogue extends AbstractComponent {
+
 	WebDriver driver;
-	
-	public ProductCatalogue(WebDriver driver) 
-	{
-		//Initialization
+
+	public ProductCatalogue(WebDriver driver) {
+		// Initialization
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
 
-
-	@FindBy(css= ".mb-3")
+	@FindBy(css = ".mb-3")
 	List<WebElement> products;
-	
-	@FindBy(css= ".ng-animating")
+
+	@FindBy(css = ".ng-animating")
 	WebElement spinner;
-	
-	
-	
+
 	By productsBy = By.cssSelector(".mb-3");
 	By addToCart = By.cssSelector(".card-body button:last-of-type");
 	By toastMessage = By.cssSelector("#toast-container");
-	
-	public List<WebElement> getProductList() 
-	{
+
+	public List<WebElement> getProductList() {
 		waitForElementToAppear(productsBy);
 		return products;
 	}
-	
-	public WebElement getProductByName(String productName)
-	{
+
+	public WebElement getProductByName(String productName) {
 		WebElement Prod = getProductList().stream()
 				.filter(Product -> Product.findElement(By.cssSelector("b")).getText().equals(productName)).findFirst()
 				.orElse(null);
 		return Prod;
 	}
-	
-	public void addProductToCart(String productName)
-	{
-		WebElement Prod =getProductByName(productName);
+
+	public void addProductToCart(String productName) {
+		WebElement Prod = getProductByName(productName);
 		Prod.findElement(addToCart).click();
 		waitForElementToAppear(toastMessage);
 		waitForElementToDisappear(spinner);
-	
-		
+
 	}
 }

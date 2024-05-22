@@ -10,41 +10,39 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import SunilKunwal.AbstractComponents.AbstractComponent;
 
-public class CheckoutPage extends AbstractComponent{
-	
+public class CheckoutPage extends AbstractComponent {
+
 	WebDriver driver;
+	Actions action;
 
 	public CheckoutPage(WebDriver driver) {
 		super(driver);
 		this.driver = driver;
+		this.action = new Actions(driver); // Initialize Actions instance once
 		PageFactory.initElements(driver, this);
+
 	}
-	
-	@FindBy(css= "[placeholder='Select Country']")
+
+	@FindBy(css = "[placeholder='Select Country']")
 	WebElement country;
-	
-	@FindBy(css= ".action__submit")
+
+	@FindBy(css = ".action__submit")
 	WebElement submit;
-	
-	@FindBy(css= "(//button[contains(@class,'ta-item')])[2]")
+
+	@FindBy(xpath = "(//button[contains(@class,'ta-item')])[2]")
 	WebElement selecctcountry;
-	
+
 	By results = By.cssSelector(".ta-results");
-	
-	public void selecctcountry(String countryName)
-	{
-		
-		Actions action = new Actions(driver);
+
+	public void selecctcountry(String countryName) {
 		action.sendKeys(country, countryName).build().perform();
-		waitForElementToAppear(By.cssSelector(".ta-results"));
+		waitForElementToAppear(results);
 		selecctcountry.click();
 	}
-	
-	public ConfirmationPage submitOrder()
-	{
-		submit.click();
+
+	public ConfirmationPage submitOrder() {
+		action.moveToElement(submit).click().build().perform();
 		return new ConfirmationPage(driver);
 	}
 
-	
 }

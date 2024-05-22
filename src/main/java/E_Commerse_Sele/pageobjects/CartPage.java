@@ -10,47 +10,40 @@ import org.openqa.selenium.support.PageFactory;
 
 import SunilKunwal.AbstractComponents.AbstractComponent;
 
-public class CartPage extends AbstractComponent{
-	
+public class CartPage extends AbstractComponent {
+
 	WebDriver driver;
-	
-	public CartPage(WebDriver driver) 
-	{
-		//Initialization
+
+	public CartPage(WebDriver driver) {
+		// Initialization
 		super(driver);
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
-	@FindBy(css= ".totalRow button")
+
+	@FindBy(css = ".totalRow button")
 	WebElement checkoutEle;
-	
-	@FindBy(css= ".cartSection h3")
+
+	@FindBy(css = ".cartSection h3")
 	List<WebElement> cartProducts;
-	
-	
-	
+
 	By productsBy = By.cssSelector(".mb-3");
 	By addToCart = By.cssSelector(".card-body button:last-of-type");
 	By toastMessage = By.cssSelector("#toast-container");
-	
-	public List<WebElement> getProductList() 
-	{
+
+	public List<WebElement> getProductList() {
 		waitForElementToAppear(productsBy);
 		return cartProducts;
 	}
-	
-	public Boolean VerifyProductDisplay(String productName)
-	{
-		Boolean match = cartProducts.stream().anyMatch(Product-> Product.getText().equalsIgnoreCase(productName));
+
+	public Boolean VerifyProductDisplay(String productName) {
+		Boolean match = cartProducts.stream().anyMatch(Product -> Product.getText().equalsIgnoreCase(productName));
 		return match;
 	}
-	
-	public CheckoutPage goToheckout()
-	{
+
+	public CheckoutPage goToheckout() {
 		checkoutEle.click();
 		return new CheckoutPage(driver);
-	
-		
+
 	}
 }
