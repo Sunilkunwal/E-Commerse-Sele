@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import E_Commerse_Sele.pageobjects.CartPage;
+import E_Commerse_Sele.pageobjects.OrderPage;
 
 public class AbstractComponent {
 
@@ -26,10 +27,19 @@ public class AbstractComponent {
 	@FindBy(css = "[routerlink*='cart']")
 	WebElement cartHeader;
 
+	@FindBy(css = "[routerlink*='myorders']")
+	WebElement orderHeader;
+
 	public CartPage goToCartPage() {
 		cartHeader.click();
 		CartPage cartPage = new CartPage(driver);
 		return cartPage;
+	}
+
+	public OrderPage goToOrderPage() {
+		orderHeader.click();
+		OrderPage orderPage = new OrderPage(driver);
+		return orderPage;
 	}
 
 	public void waitForElementToAppear(By findBy) {

@@ -10,16 +10,17 @@ import org.testng.annotations.Test;
 import E_Commerse_Sele.pageobjects.CartPage;
 import E_Commerse_Sele.pageobjects.CheckoutPage;
 import E_Commerse_Sele.pageobjects.ConfirmationPage;
+import E_Commerse_Sele.pageobjects.OrderPage;
 import E_Commerse_Sele.pageobjects.ProductCatalogue;
 import SunilKunwal.TestComponents.BaseTest;
 
 public class SubmitOrderTest extends BaseTest {
+	String productName = "ZARA COAT 3";
 
 	@Test
 	public void submitOrder() throws IOException {
 		{
 
-			String productName = "ZARA COAT 3";
 			ProductCatalogue productCatalogue = landingPage.loginApplication("sunilkunwal@gmail.com", "Kunwal@123");
 			List<WebElement> Products = productCatalogue.getProductList();
 			productCatalogue.addProductToCart(productName);
@@ -34,5 +35,12 @@ public class SubmitOrderTest extends BaseTest {
 
 		}
 
+	}
+
+	@Test(dependsOnMethods = { "submitOrder" })
+	public void OrderHistoryTest() {
+		ProductCatalogue productCatalogue = landingPage.loginApplication("sunilkunwal@gmail.com", "Kunwal@123");
+		OrderPage ordersPage = productCatalogue.goToOrderPage();
+		Assert.assertTrue(ordersPage.VerifyProductDisplay(productName));
 	}
 }
