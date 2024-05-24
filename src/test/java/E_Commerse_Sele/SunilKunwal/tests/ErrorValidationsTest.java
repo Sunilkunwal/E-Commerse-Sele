@@ -15,7 +15,7 @@ import SunilKunwal.TestComponents.BaseTest;
 
 public class ErrorValidationsTest extends BaseTest {
 
-	@Test
+	@Test(groups= {"ErrorHandling"})
 	public void LoginErrorValidations() throws IOException {
 
 		landingPage.loginApplication("sunilkunwal11@gmail.com", "Kunwal1@123");
