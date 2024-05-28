@@ -1,9 +1,13 @@
 package E_Commerse_Sele.SunilKunwal.tests;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
@@ -19,8 +23,8 @@ import SunilKunwal.TestComponents.BaseTest;
 public class SubmitOrderTest extends BaseTest {
 	String productName = "ZARA COAT 3";
 
-	@Test(dataProvider="getData", groups= {"Purchase"})
-	public void submitOrder(HashMap<String,String> input) throws IOException {
+	@Test(dataProvider = "getData", groups = { "Purchase" })
+	public void submitOrder(HashMap<String, String> input) throws IOException {
 		{
 
 			ProductCatalogue productCatalogue = landingPage.loginApplication(input.get("email"), input.get("password"));
@@ -46,26 +50,39 @@ public class SubmitOrderTest extends BaseTest {
 		Assert.assertTrue(ordersPage.VerifyProductDisplay(productName));
 	}
 
+	public String getScreenshot(String testCaseName) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		File file = new File(System.getProperty("user.dir") + "//report//" + testCaseName + ".png");
+		FileUtils.copyFile(source, file);
+		return System.getProperty("user.dir") + "//report//" + testCaseName + ".png";
+	}
+
+	@DataProvider
+	public Object[][] getData() throws IOException {
+		List<HashMap<String, String>> data = getJsonDataToMap(
+				System.getProperty("user.dir") + "//src//test//java//SunilKunwal//data//PurchaseOrder.json");
+		return new Object[][] { { data.get(0) }, { data.get(1) } };
+	}
+
+//	@DataProvider
+//	public Object[] [] getData() throws IOException
+//	{
+	HashMap<String, String> map = new HashMap<String, String>();
+//		map.put("email", "sunilkunwal@gmail.com");
+//		map.put("password", "Kunwal@123");
+//		map.put("product", "ZARA COAT 3");
+//		
+//		HashMap<String,String> map1 = new HashMap<String,String>();
+//		map1.put("email", "sunilkunwal1@gmail.comm");
+//		map1.put("password", "Kunwal1@");
+//		map1.put("product", "ADIDAS ORIGINAL");
+//	}
+
 //	@DataProvider
 //	public Object[][] getData() {
 //		
 //		return new Object[][] { { "sunilkunwal@gmail.com", "Kunwal@123", "ZARA COAT 3" },
 //				{ "sunilkunwal@gmail.com", "Kunwal@123", "ADIDAS ORIGINAL" } };
 //	}
-	
-	@DataProvider
-	public Object[] [] getData()
-	{
-		HashMap<String,String> map = new HashMap<String,String>();
-		map.put("email", "sunilkunwal@gmail.com");
-		map.put("password", "Kunwal@123");
-		map.put("product", "ZARA COAT 3");
-		
-		HashMap<String,String> map1 = new HashMap<String,String>();
-		map1.put("email", "sunilkunwal1@gmail.comm");
-		map1.put("password", "Kunwal1@");
-		map1.put("product", "ADIDAS ORIGINAL");
-		
-		return new Object[] [] {{map},{map1}};
-	}
 }
