@@ -12,14 +12,15 @@ import E_Commerse_Sele.pageobjects.CheckoutPage;
 import E_Commerse_Sele.pageobjects.ConfirmationPage;
 import E_Commerse_Sele.pageobjects.ProductCatalogue;
 import SunilKunwal.TestComponents.BaseTest;
+import SunilKunwal.TestComponents.Retry;
 
 public class ErrorValidationsTest extends BaseTest {
 
-	@Test(groups= {"ErrorHandling"})
+	@Test(groups = { "ErrorHandling" }, retryAnalyzer = Retry.class)
 	public void LoginErrorValidations() throws IOException {
 
 		landingPage.loginApplication("sunilkunwal11@gmail.com", "Kunwal1@123");
-		Assert.assertEquals("Incorrect email or password.", landingPage.getErrorMessage());
+		Assert.assertEquals("Incorrect email  password.", landingPage.getErrorMessage());
 	}
 
 	@Test
