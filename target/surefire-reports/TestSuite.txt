@@ -1,8 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 6, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 82.725 s <<< FAILURE! - in TestSuite
 LoginErrorValidations(E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest)  Time elapsed: 0.749 s  <<< FAILURE!
 java.lang.AssertionError: expected [Incorrect email or password.] but found [Incorrect email  password.]
 	at E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest.LoginErrorValidations(ErrorValidationsTest.java:23)
 
+=======
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 38.32 s -- in TestSuite
+>>>>>>> 5d8570cf7e05d247870abf5cf5949ffce53bcaf4

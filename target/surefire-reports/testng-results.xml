@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results retried="1" ignored="1" total="7" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -18,6 +19,26 @@
           </reporter-output>
         </test-method> <!-- launchApplication -->
         <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" started-at="2024-05-30T17:11:48 IST" name="submitOrder" data-provider="getData" finished-at="2024-05-30T17:11:53 IST" duration-ms="5114" status="PASS">
+=======
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-05-31T12:04:03 IST" name="Suite" finished-at="2024-05-31T12:04:41 IST" duration-ms="37620">
+    <groups>
+      <group name="Purchase">
+        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@5fe94a96]" name="submitOrder" class="E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest"/>
+      </group> <!-- Purchase -->
+    </groups>
+    <test started-at="2024-05-31T12:04:03 IST" name="Error Validation Test" finished-at="2024-05-31T12:04:03 IST" duration-ms="19">
+    </test> <!-- Error Validation Test -->
+    <test started-at="2024-05-31T12:04:03 IST" name="Submit Order Test" finished-at="2024-05-31T12:04:41 IST" duration-ms="37620">
+      <class name="E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@5fe94a96]" started-at="2024-05-31T12:04:04 IST" name="launchApplication" finished-at="2024-05-31T12:04:08 IST" duration-ms="4530" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@5fe94a96]" started-at="2024-05-31T12:04:08 IST" name="submitOrder" data-provider="getData" finished-at="2024-05-31T12:04:23 IST" duration-ms="14636" status="PASS">
+>>>>>>> 5d8570cf7e05d247870abf5cf5949ffce53bcaf4
           <params>
             <param index="0">
               <value>
@@ -28,6 +49,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" started-at="2024-05-30T17:11:53 IST" name="tearDown" finished-at="2024-05-30T17:11:54 IST" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -37,6 +59,17 @@
           </reporter-output>
         </test-method> <!-- launchApplication -->
         <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" started-at="2024-05-30T17:11:59 IST" name="submitOrder" data-provider="getData" finished-at="2024-05-30T17:12:14 IST" duration-ms="15631" status="PASS">
+=======
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@5fe94a96]" started-at="2024-05-31T12:04:23 IST" name="tearDown" finished-at="2024-05-31T12:04:23 IST" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@5fe94a96]" started-at="2024-05-31T12:04:23 IST" name="launchApplication" finished-at="2024-05-31T12:04:25 IST" duration-ms="2195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@5fe94a96]" started-at="2024-05-31T12:04:25 IST" name="submitOrder" data-provider="getData" finished-at="2024-05-31T12:04:40 IST" duration-ms="14528" status="PASS">
+>>>>>>> 5d8570cf7e05d247870abf5cf5949ffce53bcaf4
           <params>
             <param index="0">
               <value>
@@ -47,6 +80,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
+<<<<<<< HEAD
         <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" started-at="2024-05-30T17:12:14 IST" name="tearDown" finished-at="2024-05-30T17:12:15 IST" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
@@ -60,6 +94,9 @@
           </reporter-output>
         </test-method> <!-- OrderHistoryTest -->
         <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" started-at="2024-05-30T17:12:23 IST" name="tearDown" finished-at="2024-05-30T17:12:23 IST" duration-ms="206" status="PASS">
+=======
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@5fe94a96]" started-at="2024-05-31T12:04:40 IST" name="tearDown" finished-at="2024-05-31T12:04:41 IST" duration-ms="1170" status="PASS">
+>>>>>>> 5d8570cf7e05d247870abf5cf5949ffce53bcaf4
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
