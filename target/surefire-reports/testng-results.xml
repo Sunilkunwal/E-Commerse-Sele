@@ -1,51 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results retried="1" ignored="1" total="7" passed="4" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-30T18:51:47 IST" name="Suite" finished-at="2024-05-30T18:52:29 IST" duration-ms="42618">
+  <suite started-at="2024-05-30T17:11:02 IST" name="Surefire suite" finished-at="2024-05-30T17:12:23 IST" duration-ms="81054">
     <groups>
-      <group name="Purchase">
-        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@6cd24612]" name="submitOrder" class="E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest"/>
-      </group> <!-- Purchase -->
       <group name="ErrorHandling">
-        <method signature="ErrorValidationsTest.LoginErrorValidations()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@3f4faf53]" name="LoginErrorValidations" class="E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest"/>
+        <method signature="ErrorValidationsTest.LoginErrorValidations()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@d706f19]" name="LoginErrorValidations" class="E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest"/>
       </group> <!-- ErrorHandling -->
+      <group name="Purchase">
+        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" name="submitOrder" class="E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest"/>
+      </group> <!-- Purchase -->
     </groups>
-    <test started-at="2024-05-30T18:51:47 IST" name="Error Validation Test" finished-at="2024-05-30T18:52:08 IST" duration-ms="20762">
-      <class name="E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@3f4faf53]" started-at="2024-05-30T18:51:47 IST" name="launchApplication" finished-at="2024-05-30T18:51:51 IST" duration-ms="4280" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="LoginErrorValidations()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@3f4faf53]" started-at="2024-05-30T18:51:51 IST" name="LoginErrorValidations" finished-at="2024-05-30T18:51:52 IST" duration-ms="466" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginErrorValidations -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@3f4faf53]" started-at="2024-05-30T18:51:52 IST" name="tearDown" finished-at="2024-05-30T18:51:52 IST" duration-ms="92" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@3f4faf53]" started-at="2024-05-30T18:51:52 IST" name="launchApplication" finished-at="2024-05-30T18:51:54 IST" duration-ms="2003" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="ProductErrorValidations()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@3f4faf53]" started-at="2024-05-30T18:51:54 IST" name="ProductErrorValidations" finished-at="2024-05-30T18:52:07 IST" duration-ms="13676" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ProductErrorValidations -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@3f4faf53]" started-at="2024-05-30T18:52:07 IST" name="tearDown" finished-at="2024-05-30T18:52:08 IST" duration-ms="153" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest -->
-    </test> <!-- Error Validation Test -->
-    <test started-at="2024-05-30T18:51:47 IST" name="Submit Order Test" finished-at="2024-05-30T18:52:29 IST" duration-ms="42618">
+    <test started-at="2024-05-30T17:11:02 IST" name="Surefire test" finished-at="2024-05-30T17:12:23 IST" duration-ms="81054">
       <class name="E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@6cd24612]" started-at="2024-05-30T18:51:47 IST" name="launchApplication" finished-at="2024-05-30T18:51:50 IST" duration-ms="2951" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" started-at="2024-05-30T17:11:42 IST" name="launchApplication" finished-at="2024-05-30T17:11:48 IST" duration-ms="6143" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@6cd24612]" started-at="2024-05-30T18:51:50 IST" name="submitOrder" data-provider="getData" finished-at="2024-05-30T18:52:07 IST" duration-ms="17025" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" started-at="2024-05-30T17:11:48 IST" name="submitOrder" data-provider="getData" finished-at="2024-05-30T17:11:53 IST" duration-ms="5114" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -56,15 +28,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@6cd24612]" started-at="2024-05-30T18:52:07 IST" name="tearDown" finished-at="2024-05-30T18:52:07 IST" duration-ms="118" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" started-at="2024-05-30T17:11:53 IST" name="tearDown" finished-at="2024-05-30T17:11:54 IST" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@6cd24612]" started-at="2024-05-30T18:52:07 IST" name="launchApplication" finished-at="2024-05-30T18:52:13 IST" duration-ms="5215" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" started-at="2024-05-30T17:11:54 IST" name="launchApplication" finished-at="2024-05-30T17:11:59 IST" duration-ms="5290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@6cd24612]" started-at="2024-05-30T18:52:13 IST" name="submitOrder" data-provider="getData" finished-at="2024-05-30T18:52:27 IST" duration-ms="14403" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" started-at="2024-05-30T17:11:59 IST" name="submitOrder" data-provider="getData" finished-at="2024-05-30T17:12:14 IST" duration-ms="15631" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -75,23 +47,155 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@6cd24612]" started-at="2024-05-30T18:52:27 IST" name="tearDown" finished-at="2024-05-30T18:52:27 IST" duration-ms="45" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" started-at="2024-05-30T17:12:14 IST" name="tearDown" finished-at="2024-05-30T17:12:15 IST" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@6cd24612]" started-at="2024-05-30T18:52:27 IST" name="launchApplication" finished-at="2024-05-30T18:52:29 IST" duration-ms="1461" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" started-at="2024-05-30T17:12:15 IST" name="launchApplication" finished-at="2024-05-30T17:12:22 IST" duration-ms="7280" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="OrderHistoryTest()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@6cd24612]" started-at="2024-05-30T18:52:29 IST" name="OrderHistoryTest" finished-at="2024-05-30T18:52:29 IST" depends-on-methods="E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest.submitOrder" duration-ms="777" status="PASS">
+        <test-method signature="OrderHistoryTest()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" started-at="2024-05-30T17:12:22 IST" name="OrderHistoryTest" finished-at="2024-05-30T17:12:23 IST" depends-on-methods="E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest.submitOrder" duration-ms="1226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OrderHistoryTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@6cd24612]" started-at="2024-05-30T18:52:29 IST" name="tearDown" finished-at="2024-05-30T18:52:29 IST" duration-ms="70" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest@7c469c48]" started-at="2024-05-30T17:12:23 IST" name="tearDown" finished-at="2024-05-30T17:12:23 IST" duration-ms="206" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- E_Commerse_Sele.SunilKunwal.tests.SubmitOrderTest -->
-    </test> <!-- Submit Order Test -->
-  </suite> <!-- Suite -->
+      <class name="E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@d706f19]" started-at="2024-05-30T17:11:02 IST" name="launchApplication" finished-at="2024-05-30T17:11:15 IST" duration-ms="12586" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method retried="true" signature="LoginErrorValidations()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@d706f19]" started-at="2024-05-30T17:11:15 IST" name="LoginErrorValidations" finished-at="2024-05-30T17:11:16 IST" duration-ms="803" status="SKIP">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Incorrect email or password.] but found [Incorrect email  password.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Incorrect email or password.] but found [Incorrect email  password.]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest.LoginErrorValidations(ErrorValidationsTest.java:23)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginErrorValidations -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@d706f19]" started-at="2024-05-30T17:11:16 IST" name="tearDown" finished-at="2024-05-30T17:11:16 IST" duration-ms="140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@d706f19]" started-at="2024-05-30T17:11:16 IST" name="launchApplication" finished-at="2024-05-30T17:11:22 IST" duration-ms="6366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="LoginErrorValidations()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@d706f19]" started-at="2024-05-30T17:11:22 IST" name="LoginErrorValidations" finished-at="2024-05-30T17:11:23 IST" duration-ms="740" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Incorrect email or password.] but found [Incorrect email  password.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Incorrect email or password.] but found [Incorrect email  password.]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest.LoginErrorValidations(ErrorValidationsTest.java:23)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginErrorValidations -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@d706f19]" started-at="2024-05-30T17:11:23 IST" name="tearDown" finished-at="2024-05-30T17:11:23 IST" duration-ms="109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@d706f19]" started-at="2024-05-30T17:11:23 IST" name="launchApplication" finished-at="2024-05-30T17:11:27 IST" duration-ms="3776" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="ProductErrorValidations()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@d706f19]" started-at="2024-05-30T17:11:27 IST" name="ProductErrorValidations" finished-at="2024-05-30T17:11:41 IST" duration-ms="14375" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProductErrorValidations -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest@d706f19]" started-at="2024-05-30T17:11:41 IST" name="tearDown" finished-at="2024-05-30T17:11:41 IST" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- E_Commerse_Sele.SunilKunwal.tests.ErrorValidationsTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>
